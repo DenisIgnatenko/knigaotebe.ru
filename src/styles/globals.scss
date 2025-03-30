@@ -1,0 +1,12 @@
+@import "./variables";
+
+body {
+  margin: 0;
+  font-family: 'Comfortaa', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.app {
+  padding: 2rem;
+}

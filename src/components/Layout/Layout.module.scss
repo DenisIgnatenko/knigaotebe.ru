@@ -1,0 +1,277 @@
+.desktopHeader {
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+
+  @media (max-width: 986px) {
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    img {
+      height: auto;
+      display: block;
+    }
+
+    .logoText {
+      font-family: 'Comfortaa', cursive;
+      font-size: 20px;
+      font-weight: 600;
+      color: #53504A;
+    }
+  }
+}
+
+.mobileHeader {
+  display: none;
+
+  @media (max-width: 986px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+  }
+
+  .iconButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .centerLogo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    img {
+      width: auto;
+    }
+
+    span {
+      font-family: 'Comfortaa', cursive;
+      font-size: 18px;
+      font-weight: 600;
+      color: #53504A;
+    }
+  }
+}
+
+
+.topNavDesktop {
+  justify-self: center;
+
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  ul {
+    display: flex;
+    gap: 40px;
+    padding: 0 40px;
+    list-style: none;
+
+    li a {
+      font-family: 'Rubik', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      white-space: nowrap;
+      color: #53504A;
+      text-decoration: none;
+      letter-spacing: -0.48px;
+
+      &:hover {
+        color: #E05F38;
+      }
+    }
+  }
+}
+
+.logo {
+  justify-self: start;
+}
+
+.headerWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.orderButtonWrapper {
+  justify-self: end;
+}
+
+.orderButton {
+  display: flex;
+  padding: 10px 24px 10px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 1000px;
+  background: #E05F38;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: filter 0.3s ease;
+
+  white-space: nowrap;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+
+.topNavMobile {
+  display: none;
+
+  @media (max-width: 986px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 24px;
+    gap: 16px;
+    z-index: 1000;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+
+    li {
+      width: 100%;
+
+      a {
+        display: block;
+        padding: 12px 0;
+        width: 100%;
+        font-family: 'Rubik', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: #53504A;
+        text-decoration: none;
+        letter-spacing: -0.48px;
+
+        &:hover {
+          color: #007AFF;
+        }
+      }
+    }
+  }
+}
+
+.stepsNav {
+  display: flex;
+  justify-content: space-between;
+  //background-color: #EBE9D8;
+  padding: 12px 24px;
+  border-radius: 50px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    padding: 8px 8px;
+  }
+}
+
+.step {
+  flex: 1;
+  padding: 15px 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.42px;
+  color: #88857E;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+
+  img.stepIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:first-child {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  &.completed,
+  &.active {
+    background: #53504A;
+    color: #FAF8EC;
+  }
+
+  &.lastCompleted {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+
+    &.active{
+      display: flex;
+      flex: 0 1 auto;
+      padding: 12px 20px;
+      border-radius: 40px;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+
+      &.active {
+        display: flex;
+        flex: 1;
+        width: 100%;
+        justify-content: center;
+        padding: 16px 20px;
+        border-radius: 40px;
+        font-size: 16px;
+        gap: 12px;
+
+        img.stepIcon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
