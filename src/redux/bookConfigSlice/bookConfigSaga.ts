@@ -11,7 +11,7 @@ function* fetchFormatWorker() {
         title: "Эконом",
         shortDescription:
           "Базовый вариант исполнения книги \n" + "в качестве уникального подарка. ",
-        image: "/images/books/economy.png",
+        image: new URL("../../images/books/economy.png", import.meta.url).href,
         details: {
           description:
             "Уникальный запоминающийся подарок \n" +
@@ -39,7 +39,7 @@ function* fetchFormatWorker() {
         title: "Стандарт",
         shortDescription:
           "Самый популярный формат книги сочетает в себе крупный формат и высокое качество.",
-        image: "/images/books/standard.png",
+        image: new URL("../../images/books/standard.png", import.meta.url).href,
         details: {
           description:
             "Уникальный запоминающийся подарок \n" +
@@ -66,7 +66,7 @@ function* fetchFormatWorker() {
         id: "premium",
         title: "Премиум",
         shortDescription: "Премиальное качество исполнения книги крупного формата.",
-        image: "/images/books/premium.png",
+        image: new URL("../../images/books/premium.png", import.meta.url).href,
         details: {
           description:
             "Уникальный запоминающийся подарок \n" +
@@ -90,7 +90,7 @@ function* fetchFormatWorker() {
         isBestSeller: false,
       },
     ];
-    yield put(fetchFormatsSuccess);
+    yield put(fetchFormatsSuccess(fakeResponse));
   } catch (error) {
     yield put(fetchFormatsFailure("Ошибка загрузки форматов книг"));
   }
