@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel src/index.html --open",
-    "build": "parcel build src/index.html"
+    "dev": "PARCEL_WORKERS=0 parcel src/index.html --open",
+    "build": "parcel build src/index.html",
+    "dev-normal": "parcel src/index.html --open"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +22,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.14.3",
-    "@parcel/transformer-svg": "^2.14.3",
+    "@parcel/transformer-svg": "2.14.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",
     "parcel": "2.14.3",

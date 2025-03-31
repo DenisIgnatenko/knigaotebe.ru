@@ -12,6 +12,7 @@ function* fetchFormatWorker() {
         shortDescription:
           "Базовый вариант исполнения книги \n" + "в качестве уникального подарка. ",
         image: new URL("../../images/books/economy.png", import.meta.url).href,
+        // image: "/images/books/economy.png",
         details: {
           description:
             "Уникальный запоминающийся подарок \n" +
@@ -40,6 +41,7 @@ function* fetchFormatWorker() {
         shortDescription:
           "Самый популярный формат книги сочетает в себе крупный формат и высокое качество.",
         image: new URL("../../images/books/standard.png", import.meta.url).href,
+        // image: "/images/books/standard.png",
         details: {
           description:
             "Уникальный запоминающийся подарок \n" +
@@ -67,6 +69,7 @@ function* fetchFormatWorker() {
         title: "Премиум",
         shortDescription: "Премиальное качество исполнения книги крупного формата.",
         image: new URL("../../images/books/premium.png", import.meta.url).href,
+        // image: "/images/books/premium.png",
         details: {
           description:
             "Уникальный запоминающийся подарок \n" +

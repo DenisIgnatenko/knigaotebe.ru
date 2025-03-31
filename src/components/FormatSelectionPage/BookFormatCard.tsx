@@ -26,8 +26,8 @@ const BookFormatCard: React.FC<Props> = ({ format, selected, onSelect, onOpenMod
           <div className={styles.title}>{format.title}</div>
           <button
             className={styles.detailsBtn}
-            onClick={(e) => {
-              e.stopPropagation();
+            onClick={(event) => {
+              event.stopPropagation();
               onOpenModal?.();
             }}
           >
