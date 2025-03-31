@@ -1,15 +1,13 @@
 import React from "react";
 import styles from "./Layout.module.scss";
 
-const orderIcon = new URL("../../images/ordericon.svg", import.meta.url).href;
-
 interface Props {
   onClick?: () => void;
 }
 
 const OrderButton: React.FC<Props> = ({ onClick }) => {
   return (
-    <div className={styles.orderButtonWrapper}>
+    <div className={styles.orderButtonWrapper} onClick={onClick}>
       <button className={styles.orderButton}>
         <img alt="" className={styles.orderIcon} />
         Оформить заказ

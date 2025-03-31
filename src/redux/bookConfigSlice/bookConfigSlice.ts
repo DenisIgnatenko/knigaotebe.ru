@@ -23,7 +23,7 @@ const bookConfigSlice = createSlice({
       state.formats = action.payload;
     },
 
-    selectFormat: (state, action: PayloadAction<string>) => {
+    selectFormat: (state, action: PayloadAction<string | null>) => {
       state.selectedFormatId = action.payload;
     },
 

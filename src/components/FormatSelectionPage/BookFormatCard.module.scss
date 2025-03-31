@@ -1,28 +1,28 @@
 .card {
-  border-radius: 20px;
-  border: 1px solid #EBE9D8;
   overflow: hidden;
   cursor: pointer;
-  //background: white;
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.2s ease;
+  border: 1px solid #ebe9d8;
+  border-radius: 12px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 
   &:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
   }
 }
 
 .selected {
-  //border: 1px solid #E05F38;
-  background: #F5F3E5;
+  background: #f5f3e5;
 }
 
 .imageWrapper {
-  border-radius: 20px 20px 0 0;
-  overflow: hidden;
   height: 200px;
+  overflow: hidden;
   background-color: #f3f3f3;
+  border-radius: 10px 10px 0 0;
 
   img {
     width: 100%;
@@ -35,61 +35,61 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
   height: 180px;
+  padding: 20px;
 }
 
 .headerRow {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
+  justify-content: space-between;
 
   .title {
-    color: #53504A;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 24px;
     font-weight: 500;
-    letter-spacing: -0.72px;
     line-height: normal;
+    color: #53504a;
+    letter-spacing: -0.72px;
   }
 
   .detailsBtn {
-    background: none;
-    border: none;
+    padding: 0;
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
-    padding: 0;
     line-height: 1;
+    cursor: pointer;
+    background: none;
+    border: none;
   }
 }
 
 .description {
+  flex-grow: 1;
   margin-top: 8px;
-  color: #8E8E83;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 140%;
+  color: #8e8e83;
   letter-spacing: -0.42px;
-  flex-grow: 1;
 }
 
 .bottomRow {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-top: auto;
 
   .size {
-    color: #53504A;
     font-size: 14px;
     font-weight: 500;
+    color: #53504a;
   }
 
   .price {
-    color: #53504A;
     font-size: 16px;
     font-weight: 600;
+    color: #53504a;
   }
 }

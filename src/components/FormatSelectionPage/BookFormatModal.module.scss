@@ -1,30 +1,30 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
   z-index: 1000;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  background: rgb(0 0 0 / 40%);
 
   .closeBtn {
     position: fixed;
     top: 24px;
     right: 24px;
-    font-size: 32px;
-    background: white;
-    border-radius: 50%;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 48px;
     height: 48px;
-    border: none;
-    cursor: pointer;
-    color: #53504A;
+    font-size: 32px;
     font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 1001;
+    color: #53504a;
+    cursor: pointer;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
 
     &:hover {
       background: #f0efeb;
@@ -33,16 +33,16 @@
 }
 
 .modal {
-  background: #ffffff;
-  border-radius: 32px;
-  width: 90%;
-  max-width: 800px;
-  padding: 32px;
   position: relative;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 90%;
+  max-width: 800px;
+  padding: 32px;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
 }
 
 .closeBtn {
@@ -50,10 +50,10 @@
   top: 24px;
   right: 24px;
   font-size: 24px;
+  color: #88857e;
+  cursor: pointer;
   background: none;
   border: none;
-  cursor: pointer;
-  color: #88857E;
 
   &:hover {
     color: #000;
@@ -61,17 +61,17 @@
 }
 
 .title {
-  font-family: 'Rubik', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  font-family: Rubik, sans-serif;
   font-size: 24px;
   font-weight: 500;
+  color: #fff;
   letter-spacing: -0.72px;
-  color: #ffffff;
-  background: #E05F38;
-  padding: 16px 24px;
+  background: #e05f38;
   border-radius: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .content {
@@ -79,28 +79,28 @@
   flex-direction: row;
   gap: 24px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     flex-direction: column;
   }
 }
 
 .leftColumn,
 .rightColumn {
-  flex: 1;
-  background: #faf8ec;
-  padding: 24px;
-  border-radius: 20px;
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 16px;
+  padding: 24px;
+  background: #faf8ec;
+  border-radius: 20px;
 }
 
 .description {
-  font-family: 'Rubik', sans-serif;
+  font-family: Rubik, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #53504A;
   line-height: 140%;
+  color: #53504a;
   letter-spacing: -0.42px;
   white-space: pre-line;
 }
@@ -108,41 +108,41 @@
 .image {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  object-fit: cover;
   margin-top: auto;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .section {
+  padding: 16px 24px;
   background: #f5f4e6;
   border-radius: 20px;
-  padding: 16px 24px;
 }
 
 .sectionTitle {
-  font-family: 'Rubik', sans-serif;
+  margin-bottom: 12px;
+  font-family: Rubik, sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #E05F38;
-  margin-bottom: 12px;
+  color: #e05f38;
 }
 
 .property {
   display: flex;
   gap: 8px;
   margin-bottom: 8px;
-  font-family: 'Rubik', sans-serif;
+  font-family: Rubik, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #53504A;
+  color: #53504a;
 
   .label {
-    color: #8E8E83;
     min-width: 100px;
+    color: #8e8e83;
   }
 
   .value {
     flex: 1;
-    color: #53504A;
+    color: #53504a;
   }
 }

@@ -1,30 +1,30 @@
 .page {
   padding: 32px 24px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     padding: 24px 16px;
   }
 }
 
 .title {
-  color: var(--text_1, #53504A);
-  text-align: center;
   font-family: Comfortaa, sans-serif;
   font-size: 54px;
   font-style: normal;
   font-weight: 600;
-  line-height: 90%; /* 48.6px */
+  line-height: 90%;
+  color: var(--text_1, #53504a);
+  text-align: center;
   letter-spacing: -2.16px;
 }
 
 .subtitle {
-  color: var(--text_2, #8E8E83);
-  text-align: center;
   font-family: Rubik, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 140%; /* 19.6px */
+  line-height: 140%;
+  color: var(--text_2, #8e8e83);
+  text-align: center;
   letter-spacing: -0.42px;
 }
 
@@ -33,7 +33,56 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     gap: 16px;
+  }
+}
+
+.gridWrapper {
+  position: relative;
+}
+
+.orderButtonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.infoMessage {
+  max-width: 90%;
+  padding: 0.75rem 1.25rem;
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Rubik, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.success {
+  color: #2f8f46;
+  background-color: #e6f7e9;
+  border: 1px solid #a2d5ac;
+}
+
+.error {
+  color: #d93025;
+  background-color: #fdecea;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

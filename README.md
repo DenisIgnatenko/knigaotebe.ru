@@ -8,12 +8,34 @@
 - Sass (SCSS)
 - i18next
 
+### Дополнительные библиотеки
+- Classnames для удобной работы со стилями с условиями.
+- Prettier
+- Stylelint по принципам Recess
+
 ## Запуск проекта
 
+Перед запуском посмотрите, чтобы была установлена **Node.js** v20+
+
+**Должно хватить для запуска:**
 ```bash
+git clone https://github.com/yourusername/knigaotebe.ru.git
+cd knigaotebe.ru
 npm install
-npm run dev
+npm run dev:mac // для mac/unix
+npm run dev:win // для windows
 ```
+**Дополнительные шаги для Windows**
+
+1. Установите пожалуйста [Visual C++ Build Tools](https://visualstudio.microsoft.com/ru/visual-cpp-build-tools/). 
+2. **При установке выберите опцию "Desktop development with C++"**
+3. Еще раз проверьте, что у вас стоит Node.js 20 
+4. Запускайте по скрипту ```bash npm run dev:win```
+
+Если при первом запуске открывается пустой браузер — обновите страницу вручную. 
+Но я там поставил delay, так что должно сработать и так.
+
+---
 
 ## Функциональность
 - Адаптивный хедер (десктоп / малые дисплеи)

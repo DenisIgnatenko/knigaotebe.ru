@@ -12,7 +12,13 @@ interface Props {
 
 const BookFormatCard: React.FC<Props> = ({ format, selected, onSelect, onOpenModal }) => {
   return (
-    <div className={classNames(styles.card, { [styles.selected]: selected })} onClick={onSelect}>
+    <div
+      className={classNames(styles.card, { [styles.selected]: selected })}
+      onClick={(event) => {
+        event.stopPropagation();
+        onSelect();
+      }}
+    >
       <div className={styles.imageWrapper}>
         <img
           src={new URL(format.image, import.meta.url).href}
