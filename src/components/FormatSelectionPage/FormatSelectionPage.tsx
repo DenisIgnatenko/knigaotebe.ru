@@ -35,7 +35,7 @@ const FormatSelectionPage: React.FC = () => {
       }, 3000);
       return () => clearTimeout(timeout);
     }
-  }, []);
+  }, [infoMessage]);
 
   return (
     <div className={styles.page} onClick={() => dispatch(selectFormat(null))}>
