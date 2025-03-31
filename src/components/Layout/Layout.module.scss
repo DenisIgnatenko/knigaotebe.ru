@@ -21,7 +21,7 @@
       font-family: Comfortaa, cursive;
       font-size: 20px;
       font-weight: 600;
-      color: #53504A;
+      color: #53504a;
     }
   }
 }
@@ -64,11 +64,10 @@
       font-family: Comfortaa, cursive;
       font-size: 18px;
       font-weight: 600;
-      color: #53504A;
+      color: #53504a;
     }
   }
 }
-
 
 .topNavDesktop {
   display: flex;
@@ -87,13 +86,13 @@
       font-family: Rubik, sans-serif;
       font-size: 16px;
       font-weight: 500;
-      color: #53504A;
+      color: #53504a;
       letter-spacing: -0.48px;
       white-space: nowrap;
       text-decoration: none;
 
       &:hover {
-        color: #E05F38;
+        color: #e05f38;
       }
     }
   }
@@ -114,18 +113,17 @@
 }
 
 .orderButton {
-  display: flex;
+  display: inline-flex;
   gap: 12px;
   align-items: center;
   justify-content: center;
-  padding: 10px 24px 10px 10px;
-  font-family: Rubik, sans-serif;
+  padding: 20px 20px;
+  font-family: "Rubik", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: white;
-  white-space: nowrap;
   cursor: pointer;
-  background: #E05F38;
+  background: #e05f38;
   border: none;
   border-radius: 1000px;
   transition: filter 0.3s ease;
@@ -135,13 +133,17 @@
   }
 }
 
+.orderIcon {
+  width: 30px;
+  height: 30px;
+}
 
 .topNavMobile {
   display: none;
 
   @media (width <= 986px) {
     position: absolute;
-    top: 80px;
+    top: 60px;
     right: 0;
     left: 0;
     z-index: 1000;
@@ -169,12 +171,12 @@
         font-family: Rubik, sans-serif;
         font-size: 16px;
         font-weight: 500;
-        color: #53504A;
+        color: #53504a;
         letter-spacing: -0.48px;
         text-decoration: none;
 
         &:hover {
-          color: #007AFF;
+          color: #007aff;
         }
       }
     }
@@ -204,13 +206,15 @@
   font-family: Rubik, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #88857E;
+  color: #88857e;
   letter-spacing: -0.42px;
   cursor: pointer;
   background: transparent;
   border: none;
   border-radius: 0;
-  transition: background 0.3s, color 0.3s;
+  transition:
+    background 0.3s,
+    color 0.3s;
 
   @media (width <= 768px) {
     display: none;
@@ -235,7 +239,7 @@
       }
     }
 
-    &.active{
+    &.active {
       display: flex;
       flex: 0 1 auto;
       padding: 12px 20px;
@@ -260,8 +264,8 @@
 
   &.completed,
   &.active {
-    color: #FAF8EC;
-    background: #53504A;
+    color: #faf8ec;
+    background: #53504a;
   }
 
   &.lastCompleted {
@@ -269,7 +273,3 @@
     border-bottom-right-radius: 40px;
   }
 }
-
-
-
-

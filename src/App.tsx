@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./components/Layout/Header";
-import NavigationSteps from "./components/Layout/NavigationSteps";
 import FormatSelectionPage from "./components/FormatSelectionPage/FormatSelectionPage";
+import NavigationStepsContainer from "./components/Layout/NavigationStepsContainer";
+import Footer from "./components/Layout/Footer";
 
 const App: React.FC = () => {
-  const [currentStep, setCurrentStep] = useState(3);
-
   return (
     <>
       <Header />
-      <NavigationSteps currentStep={currentStep} onStepChange={setCurrentStep} />
+      <NavigationStepsContainer />
       <FormatSelectionPage />
+      <Footer />
     </>
   );
 };

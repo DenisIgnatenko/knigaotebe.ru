@@ -5,12 +5,14 @@ interface Props {
   onClick?: () => void;
 }
 
+const placeOrderIcon = new URL("../../images/placeOrderIcon.svg", import.meta.url).href;
+
 const OrderButton: React.FC<Props> = ({ onClick }) => {
   return (
     <div className={styles.orderButtonWrapper} onClick={onClick}>
       <button className={styles.orderButton}>
-        <img alt="" className={styles.orderIcon} />
         Оформить заказ
+        <img src={placeOrderIcon} alt="Разместить заказ" className={styles.orderIcon} />
       </button>
     </div>
   );

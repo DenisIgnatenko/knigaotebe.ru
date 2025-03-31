@@ -24,7 +24,6 @@
     background: white;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
 
     &:hover {
       background: #f0efeb;
@@ -36,13 +35,16 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 24px;
   width: 90%;
   max-width: 800px;
-  padding: 32px;
+  padding: 16px;
   background: #fff;
-  border-radius: 32px;
+  border-radius: 24px;
   box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
+}
+
+.modalIcon {
+  margin-right: 12px;
 }
 
 .closeBtn {
@@ -60,11 +62,21 @@
   }
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  margin-bottom: 16px;
+  background: #e05f38;
+  border-radius: 20px;
+}
+
 .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 0 24px;
   font-family: Rubik, sans-serif;
   font-size: 24px;
   font-weight: 500;
@@ -77,7 +89,7 @@
 .content {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 16px;
 
   @media (width <= 768px) {
     flex-direction: column;
@@ -89,7 +101,6 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 16px;
   padding: 24px;
   background: #faf8ec;
   border-radius: 20px;
@@ -114,8 +125,7 @@
 }
 
 .section {
-  padding: 16px 24px;
-  background: #f5f4e6;
+  padding: 4px 4px;
   border-radius: 20px;
 }
 
@@ -129,7 +139,7 @@
 
 .property {
   display: flex;
-  gap: 8px;
+  gap: 4px;
   margin-bottom: 8px;
   font-family: Rubik, sans-serif;
   font-size: 14px;

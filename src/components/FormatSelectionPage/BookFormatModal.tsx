@@ -7,17 +7,25 @@ interface Props {
   onClose: () => void;
 }
 
+const formatIcons: Record<string, string> = {
+  economy: new URL("../../images/economyModalIcon.svg", import.meta.url).href,
+  standard: new URL("../../images/standardModalIcon.svg", import.meta.url).href,
+  premium: new URL("../../images/premiumModalIcon.svg", import.meta.url).href
+};
+
 const BookFormatModal: React.FC<Props> = ({ format, onClose }) => {
+  const iconUrl = formatIcons[format.id];
+
   return (
     <div className={styles.overlay} onClick={onClose}>
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+      <div className={styles.modal} onClick={e => e.stopPropagation()}>
         <button className={styles.closeBtn} onClick={onClose}>
           ×
         </button>
 
         <div className={styles.header}>
           <h2 className={styles.title}>{format.title}</h2>
-          <div className={styles.icon} />
+          <img src={iconUrl} alt="" className={styles.modalIcon} />
         </div>
 
         <div className={styles.content}>
@@ -33,32 +41,34 @@ const BookFormatModal: React.FC<Props> = ({ format, onClose }) => {
           <div className={styles.rightColumn}>
             <div className={styles.section}>
               <h3 className={styles.sectionTitle}>Обложка</h3>
-              <ul>
-                <li>
-                  <b>Тип обложки:</b> {format.details.cover.type}
-                </li>
-                <li>
-                  <b>Материал:</b> {format.details.cover.material}
-                </li>
-                <li>
-                  <b>Печать:</b> {format.details.cover.print}
-                </li>
-                <li>
-                  <b>Переплет:</b> {format.details.cover.binding}
-                </li>
-              </ul>
+              <div className={styles.property}>
+                <span className={styles.label}>Тип обложки:</span>
+                <span className={styles.value}>{format.details.cover.type}</span>
+              </div>
+              <div className={styles.property}>
+                <span className={styles.label}>Материал:</span>
+                <span className={styles.value}>{format.details.cover.material}</span>
+              </div>
+              <div className={styles.property}>
+                <span className={styles.label}>Печать:</span>
+                <span className={styles.value}>{format.details.cover.print}</span>
+              </div>
+              <div className={styles.property}>
+                <span className={styles.label}>Переплет:</span>
+                <span className={styles.value}>{format.details.cover.binding}</span>
+              </div>
             </div>
 
             <div className={styles.section}>
               <h3 className={styles.sectionTitle}>Страницы</h3>
-              <ul>
-                <li>
-                  <b>Материал:</b> {format.details.pages.material}
-                </li>
-                <li>
-                  <b>Печать:</b> {format.details.pages.print}
-                </li>
-              </ul>
+              <div className={styles.property}>
+                <span className={styles.label}>Материал:</span>
+                <span className={styles.value}>{format.details.pages.material}</span>
+              </div>
+              <div className={styles.property}>
+                <span className={styles.label}>Печать:</span>
+                <span className={styles.value}>{format.details.pages.print}</span>
+              </div>
             </div>
           </div>
         </div>

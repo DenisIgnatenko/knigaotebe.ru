@@ -12,6 +12,7 @@ import styles from "./FormatSelectionPage.module.scss";
 import BookFormatModal from "./BookFormatModal";
 import OrderButton from "../Layout/OrderButton";
 import classNames from "classnames";
+import { goToStep, saveOrderFormat } from "../../redux/bookConfigSlice/orderSlice";
 
 const FormatSelectionPage: React.FC = () => {
   const dispatch = useDispatch();
@@ -65,6 +66,8 @@ const FormatSelectionPage: React.FC = () => {
               const selected = formats.find(format => format.id === selectedId);
               setInfoMessage(`Вы выбрали формат: ${selected?.title}`);
               setMessageType("success");
+              dispatch(saveOrderFormat(selectedId));
+              dispatch(goToStep("done"));
             }
           }}
         />
