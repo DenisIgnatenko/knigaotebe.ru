@@ -10,8 +10,8 @@
   </tr>
   <tr>
     <td>
-      <a href="./src/images/screenshots/mobile.png" target="_blank">
-        <img src="./src/images/screenshots/mobile.png" width="200"/>
+      <a href="./src/images/screenshots/Mobile.png" target="_blank">
+        <img src="./src/images/screenshots/Mobile.png" width="200"/>
       </a>
     </td>
     <td>
