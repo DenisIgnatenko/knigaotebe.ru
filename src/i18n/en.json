@@ -1,0 +1,99 @@
+{
+  "menu": {
+    "catalog": "Catalog",
+    "themes": "Themes and Events",
+    "children": "For Children",
+    "adults": "For Adults",
+    "contacts": "Contacts"
+  },
+  "order": {
+    "button": "Order Book",
+    "placeOrder": "Place Order"
+  },
+  "messages": {
+    "selectFormat": "Please select a format before placing an order",
+    "formatSelected": "You have selected the format: {{format}}"
+
+  },
+  "formatSelection": {
+    "title": "Choose a format for your book",
+    "subtitle": "We offer three book size options."
+  },
+  "footer": {
+    "privacyPolicy": "Privacy Policy",
+    "copyright": "© 2025 Book About You"
+  },
+  "navigation": {
+    "characterCreation": "Character Creation",
+    "photoUpload": "Photo Upload",
+    "bookCreation": "Book Creation",
+    "formatSelection": "Format Selection",
+    "bookReady": "Book Ready"
+  },
+
+  "bookDetails": {
+    "cover": "Cover",
+    "pages": "Pages",
+    "fields": {
+      "coverType": "Cover Type",
+      "coverMaterial": "Material",
+      "coverPrint": "Print",
+      "coverBinding": "Binding",
+      "pagesMaterial": "Material",
+      "pagesPrint": "Print"
+    }
+  },
+  "formats": {
+    "economy": {
+      "title": "Economy",
+      "shortDescription": "Basic version of the book as a unique gift.",
+      "description": "A unique and memorable gift for life. The largest print format and premium quality.\n\nThe thick matte photo paper is pleasant to flip through, and the book opens 180 degrees, forming a flat surface at the spine.",
+      "cover": {
+        "type": "Hardcover",
+        "material": "Coated paper with lamination on board",
+        "print": "Digital offset",
+        "binding": "Hot glue binding"
+      },
+      "pages": {
+        "material": "Coated paper 170gsm",
+        "print": "–"
+      },
+      "size": "20x20 cm",
+      "price": "$45.87"
+    },
+    "standard": {
+      "title": "Standard",
+      "shortDescription": "The most popular format with large size and high quality.",
+      "description": "A unique and memorable gift for life. The largest print format and premium quality.\n\nThe thick matte photo paper is pleasant to flip through, and the book opens 180 degrees, forming a flat surface at the spine.",
+      "cover": {
+        "type": "Hardcover",
+        "material": "Coated paper with lamination",
+        "print": "Digital offset",
+        "binding": "Hot glue binding"
+      },
+      "pages": {
+        "material": "Coated paper 180gsm",
+        "print": "–"
+      },
+      "size": "25x25 cm",
+      "price": "$59.76"
+    },
+    "premium": {
+      "title": "Premium",
+      "shortDescription": "Premium-quality book in a large format.",
+      "description": "A unique and memorable gift for life. The largest print format and premium quality.\n\nThe thick matte photo paper is pleasant to flip through, and the book opens 180 degrees, forming a flat surface at the spine.",
+      "cover": {
+        "type": "Hardcover",
+        "material": "Coated paper with lamination",
+        "print": "Digital offset",
+        "binding": "Thermal leaf binding"
+      },
+      "pages": {
+        "material": "Coated paper 200gsm",
+        "print": "RA-4 photographic process"
+      },
+      "size": "30x30 cm",
+      "price": "$96.49"
+    }
+  }
+}

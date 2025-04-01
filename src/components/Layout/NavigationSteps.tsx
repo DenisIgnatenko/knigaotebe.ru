@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./Layout.module.scss";
 import classNames from "classnames";
+import { OrderStep } from "../../redux/bookConfigSlice/orderSlice";
 
 interface Step {
+  key: OrderStep;
   label: string;
   icon: string;
 }
@@ -10,7 +12,7 @@ interface Step {
 interface Props {
   currentStep: number;
   onStepChange: (index: number) => void;
-  steps: Step[];
+  steps: ReadonlyArray<Step>;
 }
 
 const NavigationSteps: React.FC<Props> = ({ currentStep, onStepChange, steps }) => {

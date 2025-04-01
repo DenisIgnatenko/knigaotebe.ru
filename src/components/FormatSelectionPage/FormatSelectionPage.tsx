@@ -13,6 +13,7 @@ import BookFormatModal from "./BookFormatModal";
 import OrderButton from "../Layout/OrderButton";
 import classNames from "classnames";
 import { goToStep, saveOrderFormat } from "../../redux/bookConfigSlice/orderSlice";
+import { useTranslation } from "react-i18next";
 
 const FormatSelectionPage: React.FC = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ const FormatSelectionPage: React.FC = () => {
   const modalFormat = formats.find(f => f.id === modalFormatId);
   const [infoMessage, setInfoMessage] = useState<string | null>(null);
   const [messageType, setMessageType] = useState<"success" | "error" | null>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     dispatch(fetchFormatsRequest());
@@ -39,8 +41,8 @@ const FormatSelectionPage: React.FC = () => {
 
   return (
     <div className={styles.page} onClick={() => dispatch(selectFormat(null))}>
-      <h1 className={styles.title}>Выберите формат для своей книги</h1>
-      <p className={styles.subtitle}>Мы предлагаем три варианта размера книги.</p>
+      <h1 className={styles.title}>{t("formatSelection.title")}</h1>
+      <p className={styles.subtitle}>{t("formatSelection.subtitle")}</p>
       <div className={styles.gridWrapper}>
         <div className={styles.grid}>
           {formats.map(format => (
@@ -60,11 +62,15 @@ const FormatSelectionPage: React.FC = () => {
         <OrderButton
           onClick={() => {
             if (!selectedId) {
-              setInfoMessage("Пожалуйста, выберите формат перед оформлением заказа");
+              setInfoMessage(t("messages.selectFormat"));
               setMessageType("error");
             } else {
               const selected = formats.find(format => format.id === selectedId);
-              setInfoMessage(`Вы выбрали формат: ${selected?.title}`);
+              setInfoMessage(
+                t("messages.formatSelected", {
+                  format: t(`formats.${selected?.id}.title`)
+                })
+              );
               setMessageType("success");
               dispatch(saveOrderFormat(selectedId));
               dispatch(goToStep("done"));

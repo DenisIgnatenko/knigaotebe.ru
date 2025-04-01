@@ -8,90 +8,70 @@ function* fetchFormatWorker() {
     const fakeResponse: BookFormat[] = [
       {
         id: "economy",
-        title: "Эконом",
-        shortDescription:
-          "Базовый вариант исполнения книги \n" + "в качестве уникального подарка. ",
+        title: "formats.economy.title",
+        shortDescription: "formats.economy.shortDescription",
         image: new URL("../../images/books/economy.png", import.meta.url).href,
-        // image: "/images/books/economy.png",
         details: {
-          description:
-            "Уникальный запоминающийся подарок \n" +
-            "на всю жизнь. Самый большой формат печати и премиальное исполнение. \n" +
-            "\n" +
-            "Странички из плотной матовой фотобумаги приятно перелистывать, а сама " +
-            "книга раскрывается на 180 градусов образуя плоскую поверхность на месте корешка.",
+          description: "formats.economy.description",
           cover: {
-            type: "Твердый переплет",
-            material: "Мелованная бумага с ламинацией, кашированная на переплетный картон",
-            print: "Цифровой офсет",
-            binding: "Проклейка термоклеем по корешку",
+            type: "formats.economy.cover.type",
+            material: "formats.economy.cover.material",
+            print: "formats.economy.cover.print",
+            binding: "formats.economy.cover.binding"
           },
           pages: {
-            material: "Мелованная бумага 170гр/м2",
-            print: "–",
-          },
+            material: "formats.economy.pages.material",
+            print: "formats.economy.pages.print"
+          }
         },
         size: "20✕20 см",
         price: 3884,
-        isBestSeller: false,
+        isBestSeller: false
       },
       {
         id: "standard",
-        title: "Стандарт",
-        shortDescription:
-          "Самый популярный формат книги сочетает в себе крупный формат и высокое качество.",
+        title: "formats.standard.title",
+        shortDescription: "formats.standard.shortDescription",
         image: new URL("../../images/books/standard.png", import.meta.url).href,
-        // image: "/images/books/standard.png",
         details: {
-          description:
-            "Уникальный запоминающийся подарок \n" +
-            "на всю жизнь. Самый большой формат печати и премиальное исполнение. \n" +
-            "\n" +
-            "Странички из плотной матовой фотобумаги приятно перелистывать, а сама " +
-            "книга раскрывается на 180 градусов образуя плоскую поверхность на месте корешка.",
+          description: "formats.standard.description",
           cover: {
-            type: "Твердый переплет",
-            material: "Мелованная бумага с ламинацией",
-            print: "Цифровой офсет",
-            binding: "Проклейка термоклеем по корешку",
+            type: "formats.standard.cover.type",
+            material: "formats.standard.cover.material",
+            print: "formats.standard.cover.print",
+            binding: "formats.standard.cover.binding"
           },
           pages: {
-            material: "Мелованная бумага 180гр/м2",
-            print: "–",
-          },
+            material: "formats.standard.pages.material",
+            print: "formats.standard.pages.print"
+          }
         },
-        size: "25✕25 см",
-        price: 5992,
-        isBestSeller: true,
+        size: "20✕20 см",
+        price: 3884,
+        isBestSeller: true
       },
       {
         id: "premium",
-        title: "Премиум",
-        shortDescription: "Премиальное качество исполнения книги крупного формата.",
-        image: new URL("../../images/books/premium.png", import.meta.url).href,
-        // image: "/images/books/premium.png",
+        title: "formats.premium.title",
+        shortDescription: "formats.premium.shortDescription",
+        image: new URL("../../images/books/economy.png", import.meta.url).href,
         details: {
-          description:
-            "Уникальный запоминающийся подарок \n" +
-            "на всю жизнь. Самый большой формат печати и премиальное исполнение. \n" +
-            "\n" +
-            "Странички из плотной матовой фотобумаги приятно перелистывать, а сама " +
-            "книга раскрывается на 180 градусов образуя плоскую поверхность на месте корешка.",
+          description: "formats.premium.description",
           cover: {
-            type: "Твердый переплет",
-            material: "Мелованная бумага с ламинацией",
-            print: "Цифровой офсет",
-            binding: "Крепление термолистом",
+            type: "formats.premium.cover.type",
+            material: "formats.premium.cover.material",
+            print: "formats.premium.cover.print",
+            binding: "formats.premium.cover.binding"
           },
           pages: {
-            material: "Мелованная бумага 200гр/м2",
-            print: "Фотопечать по процессу RA-4",
-          },
+            material: "formats.premium.pages.material",
+            print: "formats.premium.pages.print"
+          }
         },
-        size: "30✕30 см",
-        price: 8171,
-        isBestSeller: false,
-      },
+        size: "20✕20 см",
+        price: 3884,
+        isBestSeller: false
+      }
     ];
     yield put(fetchFormatsSuccess(fakeResponse));
   } catch (error) {

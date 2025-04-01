@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Layout.module.scss";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const logo = new URL("../../images/logo.svg", import.meta.url).href;
 const orderIcon = new URL("../../images/ordericon.svg", import.meta.url).href;
@@ -9,57 +11,58 @@ const cartIcon = new URL("../../images/carticon.svg", import.meta.url).href;
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleLinkClick = () => setIsMenuOpen(false);
+  const { t } = useTranslation();
 
   return (
     <header>
       <div className={styles.mobileHeader}>
-        <button className={styles.iconButton} aria-label="Корзина">
-          <img src={cartIcon} alt="Корзина" />
+        <button className={styles.iconButton}>
+          <img src={cartIcon} alt="" />
         </button>
 
         <div className={styles.centerLogo}>
-          <img src={logo} alt="Книга о тебе" />
+          <img src={logo} alt="" />
         </div>
 
         <button
           className={styles.iconButton}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Открыть меню"
+          aria-label=""
         >
-          <img src={burgerIcon} alt="Меню" />
+          <img src={burgerIcon} alt="menu" />
         </button>
       </div>
 
       <div className={styles.desktopHeader}>
         <div className={styles.headerWrapper}>
           <div className={styles.logo}>
-            <img src={logo} alt="Книга о тебе" />
+            <img src={logo} alt="" />
           </div>
 
           <nav className={styles.topNavDesktop}>
             <ul>
               <li>
-                <a href="#">Каталог</a>
+                <a href="#">{t("menu.catalog")}</a>
               </li>
               <li>
-                <a href="#">Темы и события</a>
+                <a href="#">{t("menu.themes")}</a>
               </li>
               <li>
-                <a href="#">Для детей</a>
+                <a href="#">{t("menu.children")}</a>
               </li>
               <li>
-                <a href="#">Для взрослых</a>
+                <a href="#">{t("menu.adults")}</a>
               </li>
               <li>
-                <a href="#">Контакты</a>
+                <a href="#">{t("menu.contacts")}</a>
               </li>
             </ul>
           </nav>
-
           <div className={styles.orderButtonWrapper}>
+            <LanguageSwitcher />
             <button className={styles.orderButton}>
               <img src={orderIcon} alt="" />
-              Заказать книгу
+              {t("order.button")}
             </button>
           </div>
         </div>
@@ -70,33 +73,36 @@ const Header: React.FC = () => {
           <ul>
             <li>
               <a href="#" onClick={handleLinkClick}>
-                Каталог
+                {t("menu.catalog")}
               </a>
             </li>
             <li>
               <a href="#" onClick={handleLinkClick}>
-                Темы и события
+                {t("menu.themes")}
               </a>
             </li>
             <li>
               <a href="#" onClick={handleLinkClick}>
-                Для детей
+                {t("menu.children")}
               </a>
             </li>
             <li>
               <a href="#" onClick={handleLinkClick}>
-                Для взрослых
+                {t("menu.adults")}
               </a>
             </li>
             <li>
               <a href="#" onClick={handleLinkClick}>
-                Контакты
+                {t("menu.contacts")}
               </a>
             </li>
           </ul>
+          <div className={styles.mobileLangSwitcher}>
+            <LanguageSwitcher />
+          </div>
           <button className={styles.orderButton}>
             <img src={orderIcon} alt="" className={styles.orderIcon} />
-            Заказать книгу
+            {t("order.button")}
           </button>
         </nav>
       )}

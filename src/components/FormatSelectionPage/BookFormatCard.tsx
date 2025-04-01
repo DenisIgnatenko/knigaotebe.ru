@@ -2,6 +2,7 @@ import React from "react";
 import { BookFormat } from "../../redux/bookConfigSlice/types";
 import styles from "./BookFormatCard.module.scss";
 import classNames from "classnames";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   format: BookFormat;
@@ -11,10 +12,11 @@ interface Props {
 }
 
 const BookFormatCard: React.FC<Props> = ({ format, selected, onSelect, onOpenModal }) => {
+  const { t } = useTranslation();
   return (
     <div
       className={classNames(styles.card, { [styles.selected]: selected })}
-      onClick={(event) => {
+      onClick={event => {
         event.stopPropagation();
         onSelect();
       }}
@@ -29,10 +31,10 @@ const BookFormatCard: React.FC<Props> = ({ format, selected, onSelect, onOpenMod
 
       <div className={styles.info}>
         <div className={styles.headerRow}>
-          <div className={styles.title}>{format.title}</div>
+          <div className={styles.title}>{t(format.title)}</div>
           <button
             className={styles.detailsBtn}
-            onClick={(event) => {
+            onClick={event => {
               event.stopPropagation();
               onOpenModal?.();
             }}
@@ -41,11 +43,11 @@ const BookFormatCard: React.FC<Props> = ({ format, selected, onSelect, onOpenMod
           </button>
         </div>
 
-        <div className={styles.description}>{format.shortDescription}</div>
+        <div className={styles.description}>{t(format.shortDescription)}</div>
 
         <div className={styles.bottomRow}>
-          <div className={styles.size}>{format.size}</div>
-          <div className={styles.price}>{format.price.toLocaleString("ru-RU")} ₽</div>
+          <div className={styles.size}>{t(`formats.${format.id}.size`)}</div>
+          <div className={styles.price}>{t(`formats.${format.id}.price`)}</div>
         </div>
       </div>
     </div>

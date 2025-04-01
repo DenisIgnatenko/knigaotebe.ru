@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Layout.module.scss";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   onClick?: () => void;
@@ -8,10 +9,11 @@ interface Props {
 const placeOrderIcon = new URL("../../images/placeOrderIcon.svg", import.meta.url).href;
 
 const OrderButton: React.FC<Props> = ({ onClick }) => {
+  const { t } = useTranslation();
   return (
     <div className={styles.orderButtonWrapper} onClick={onClick}>
       <button className={styles.orderButton}>
-        Оформить заказ
+        {t("order.placeOrder")}
         <img src={placeOrderIcon} alt="Разместить заказ" className={styles.orderIcon} />
       </button>
     </div>
