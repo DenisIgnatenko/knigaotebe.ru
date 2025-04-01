@@ -42,6 +42,7 @@
     <td></td>
   </tr>
 </table>
+
 ## Стек
 - React + TypeScript
 - Redux Toolkit + Redux-Saga
