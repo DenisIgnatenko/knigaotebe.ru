@@ -1,6 +1,47 @@
 # Книга о тебе — Тестовое задание
 Фронтенд-часть интерфейса для выбора формата книги согласно макету Figma.
+### 🖼️ Скриншоты
 
+<table>
+  <tr>
+    <th>Мобильная версия</th>
+    <th>Десктоп (EN)</th>
+    <th>Десктоп (RU)</th>
+  </tr>
+  <tr>
+    <td>
+      <a href="./src/images/screenshots/mobile.png" target="_blank">
+        <img src="./src/images/screenshots/mobile.png" width="200"/>
+      </a>
+    </td>
+    <td>
+      <a href="./src/images/screenshots/Main Screen English.png" target="_blank">
+        <img src="./src/images/screenshots/Main Screen English.png" width="200"/>
+      </a>
+    </td>
+    <td>
+      <a href="./src/images/screenshots/Main Screen Russian.png" target="_blank">
+        <img src="./src/images/screenshots/Main Screen Russian.png" width="200"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="3">Модальные окна</th>
+  </tr>
+  <tr>
+    <td>
+      <a href="./src/images/screenshots/Modal English.png" target="_blank">
+        <img src="./src/images/screenshots/Modal English.png" width="200"/>
+      </a>
+    </td>
+    <td>
+      <a href="./src/images/screenshots/Modal Russian.png" target="_blank">
+        <img src="./src/images/screenshots/Modal Russian.png" width="200"/>
+      </a>
+    </td>
+    <td></td>
+  </tr>
+</table>
 ## Стек
 - React + TypeScript
 - Redux Toolkit + Redux-Saga
