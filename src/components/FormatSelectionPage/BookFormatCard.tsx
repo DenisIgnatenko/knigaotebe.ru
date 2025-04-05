@@ -1,5 +1,5 @@
 import React from "react";
-import { BookFormat } from "../../redux/bookConfigSlice/types";
+import { BookFormat } from "@/entities/book";
 import styles from "./BookFormatCard.module.scss";
 import classNames from "classnames";
 import { useTranslation } from "react-i18next";

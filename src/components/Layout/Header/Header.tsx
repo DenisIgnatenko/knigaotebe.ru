@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import styles from "./Layout.module.scss";
+import styles from "./Header.module.scss";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
-const logo = new URL("../../images/logo.svg", import.meta.url).href;
-const orderIcon = new URL("../../images/ordericon.svg", import.meta.url).href;
-const burgerIcon = new URL("../../images/burgericon.svg", import.meta.url).href;
-const cartIcon = new URL("../../images/carticon.svg", import.meta.url).href;
+const logo = new URL("../../../images/logo.svg", import.meta.url).href;
+const orderIcon = new URL("../../.." + "/images/ordericon.svg", import.meta.url).href;
+const burgerIcon = new URL("../../../images/burgericon.svg", import.meta.url).href;
+const cartIcon = new URL("../../../images/carticon.svg", import.meta.url).href;
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
     <header>
       <div className={styles.mobileHeader}>
         <button className={styles.iconButton}>
-          <img src={cartIcon} alt="" />
+          <img src={cartIcon} alt="d" />
         </button>
 
         <div className={styles.centerLogo}>

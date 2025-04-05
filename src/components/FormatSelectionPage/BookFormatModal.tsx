@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./BookFormatModal.module.scss";
-import { BookFormat } from "../../redux/bookConfigSlice/types";
+import { BookFormat } from "@/entities/book";
 import { useTranslation } from "react-i18next";
 
 interface Props {

@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
+import { RootState } from "@/app/providers/store";
 import {
   closeModal,
   fetchFormatsRequest,
+  goToStep,
   openModal,
+  saveOrderFormat,
   selectFormat
-} from "../../redux/bookConfigSlice/bookConfigSlice";
+} from "@/entities/book";
 import BookFormatCard from "./BookFormatCard";
 import styles from "./FormatSelectionPage.module.scss";
 import BookFormatModal from "./BookFormatModal";
-import OrderButton from "../Layout/OrderButton";
+import OrderButton from "../Layout/OrderButton/OrderButton";
 import classNames from "classnames";
-import { goToStep, saveOrderFormat } from "../../redux/bookConfigSlice/orderSlice";
 import { useTranslation } from "react-i18next";
 
 const FormatSelectionPage: React.FC = () => {

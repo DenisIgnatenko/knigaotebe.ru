@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./Layout.module.scss";
+import styles from "./OrderButton.module.scss";
 import { useTranslation } from "react-i18next";
 
 interface Props {
   onClick?: () => void;
 }
 
-const placeOrderIcon = new URL("../../images/placeOrderIcon.svg", import.meta.url).href;
+const placeOrderIcon = new URL("../../../images/placeOrderIcon.svg", import.meta.url).href;
 
 const OrderButton: React.FC<Props> = ({ onClick }) => {
   const { t } = useTranslation();

@@ -1,0 +1,32 @@
+.orderButtonWrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.orderButton {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  background: #e05f38;
+  border: none;
+  border-radius: 1000px;
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.orderIcon {
+  width: 30px;
+  height: 30px;
+}

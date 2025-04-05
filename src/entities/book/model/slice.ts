@@ -4,10 +4,10 @@ import { BookConfigState, BookFormat } from "./types";
 const initialState: BookConfigState = {
   formats: [],
   selectedFormatId: null,
-  modalFormatId: null,
+  modalFormatId: null
 };
 
-const bookConfigSlice = createSlice({
+const slice = createSlice({
   name: "bookFormats",
   initialState,
   reducers: {
@@ -31,10 +31,10 @@ const bookConfigSlice = createSlice({
       state.modalFormatId = action.payload;
     },
 
-    closeModal: (state) => {
+    closeModal: state => {
       state.modalFormatId = null;
-    },
-  },
+    }
+  }
 });
 
 export const {
@@ -44,7 +44,7 @@ export const {
   setFormats,
   selectFormat,
   openModal,
-  closeModal,
-} = bookConfigSlice.actions;
+  closeModal
+} = slice.actions;
 
-export default bookConfigSlice.reducer;
+export default slice.reducer;

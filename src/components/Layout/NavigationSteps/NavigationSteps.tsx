@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./Layout.module.scss";
+import styles from "./NavigationSteps.module.scss";
 import classNames from "classnames";
-import { OrderStep } from "../../redux/bookConfigSlice/orderSlice";
+import { OrderStep } from "@/entities/book";
 
 interface Step {
   key: OrderStep;

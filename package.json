@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev:win": "set PARCEL_WORKERS=0 && parcel src/index.html --open",
-    "dev:mac": "PARCEL_WORKERS=0 parcel src/index.html & sleep 1 && open http://localhost:1234",
-    "build": "parcel build src/index.html"
+    "dev:win": "set PARCEL_WORKERS=0 && parcel index.html --open",
+    "dev:mac": "kill $(lsof -t -i:1234) 2>/dev/null || true && PARCEL_WORKERS=0 parcel index.html",
+    "build": "parcel build index.html"
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.9.7",
@@ -19,13 +19,13 @@
     "sass": "1.86.0"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.14.3",
-    "@parcel/transformer-svg": "2.14.3",
+    "@parcel/transformer-sass": "2.14.4",
+    "@parcel/transformer-svg": "2.14.4",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",
     "@types/react-redux": "7.1.25",
-    "parcel": "2.14.3",
-    "postcss-scss": "^4.0.9",
+    "parcel": "2.14.4",
+    "postcss-scss": "4.0.9",
     "prettier": "3.5.3",
     "stylelint": "^16.17.0",
     "stylelint-config-recess-order": "^6.0.0",

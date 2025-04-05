@@ -1,8 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
-import { goToStep, OrderStep } from "../../redux/bookConfigSlice/orderSlice"; // импортируй тип
+import { RootState } from "@/app/providers/store";
+import { goToStep, OrderStep } from "@/entities/book";
 import NavigationSteps from "./NavigationSteps";
 
 interface Step {
@@ -11,11 +11,11 @@ interface Step {
   icon: string;
 }
 
-const characterIcon = new URL("../../images/charactericon.svg", import.meta.url).href;
-const uploadIcon = new URL("../../images/uploadicon.svg", import.meta.url).href;
-const bookCreationIcon = new URL("../../images/bookcreationicon.svg", import.meta.url).href;
-const formatIcon = new URL("../../images/formatselectionicon.svg", import.meta.url).href;
-const doneIcon = new URL("../../images/doneicon.svg", import.meta.url).href;
+const characterIcon = new URL("../../../images/charactericon.svg", import.meta.url).href;
+const uploadIcon = new URL("../../../images/uploadicon.svg", import.meta.url).href;
+const bookCreationIcon = new URL("../../../images/bookcreationicon.svg", import.meta.url).href;
+const formatIcon = new URL("../../../images/formatselectionicon.svg", import.meta.url).href;
+const doneIcon = new URL("../../../images/doneicon.svg", import.meta.url).href;
 
 const stepOrder = ["character", "upload", "preview", "format", "done"] as const;
 
