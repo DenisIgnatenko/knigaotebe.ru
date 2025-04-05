@@ -10,18 +10,18 @@
   </tr>
   <tr>
     <td>
-      <a href="src/images/screenshots/Mobile.png" target="_blank">
-        <img src="src/images/screenshots/Mobile.png" width="200"/>
+      <a href="./src/images/screenshots/Mobile.png" target="_blank">
+        <img src="./src/images/screenshots/Mobile.png" width="200"/>
       </a>
     </td>
     <td>
-      <a href="src/shared/components/assets/screenshots/Main%20Screen%20English.png" target="_blank">
-        <img src="src/shared/components/assets/screenshots/Main%20Screen%20English.png" width="200"/>
+      <a href="./src/images/screenshots/Main Screen English.png" target="_blank">
+        <img src="./src/images/screenshots/Main Screen English.png" width="200"/>
       </a>
     </td>
     <td>
-      <a href="src/shared/components/assets/screenshots/Main%20Screen%20Russian.png" target="_blank">
-        <img src="src/shared/components/assets/screenshots/Main%20Screen%20Russian.png" width="200"/>
+      <a href="./src/images/screenshots/Main Screen Russian.png" target="_blank">
+        <img src="./src/images/screenshots/Main Screen Russian.png" width="200"/>
       </a>
     </td>
   </tr>
@@ -30,13 +30,13 @@
   </tr>
   <tr>
     <td>
-      <a href="src/shared/components/assets/screenshots/Modal%20English.png" target="_blank">
-        <img src="src/shared/components/assets/screenshots/Modal%20English.png" width="200"/>
+      <a href="./src/images/screenshots/Modal English.png" target="_blank">
+        <img src="./src/images/screenshots/Modal English.png" width="200"/>
       </a>
     </td>
     <td>
-      <a href="src/shared/components/assets/screenshots/Modal%20Russian.png" target="_blank">
-        <img src="src/shared/components/assets/screenshots/Modal%20Russian.png" width="200"/>
+      <a href="./src/images/screenshots/Modal Russian.png" target="_blank">
+        <img src="./src/images/screenshots/Modal Russian.png" width="200"/>
       </a>
     </td>
     <td></td>
