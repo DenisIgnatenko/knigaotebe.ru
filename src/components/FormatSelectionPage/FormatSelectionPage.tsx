@@ -4,11 +4,10 @@ import { RootState } from "@/app/providers/store";
 import {
   closeModal,
   fetchFormatsRequest,
-  goToStep,
   openModal,
-  saveOrderFormat,
+  orderFormatSelected,
   selectFormat
-} from "@/entities/book";
+} from "@/entities";
 import BookFormatCard from "./BookFormatCard";
 import styles from "./FormatSelectionPage.module.scss";
 import BookFormatModal from "./BookFormatModal";
@@ -28,6 +27,7 @@ const FormatSelectionPage: React.FC = () => {
 
   useEffect(() => {
     dispatch(fetchFormatsRequest());
+    console.log("Dispatched fetchFormatsRequest");
   }, [dispatch]);
 
   useEffect(() => {
@@ -39,6 +39,8 @@ const FormatSelectionPage: React.FC = () => {
       return () => clearTimeout(timeout);
     }
   }, [infoMessage]);
+
+  console.log(formats);
 
   return (
     <div className={styles.page} onClick={() => dispatch(selectFormat(null))}>
@@ -73,8 +75,9 @@ const FormatSelectionPage: React.FC = () => {
                 })
               );
               setMessageType("success");
-              dispatch(saveOrderFormat(selectedId));
-              dispatch(goToStep("done"));
+              dispatch(orderFormatSelected(selectedId));
+              // dispatch(saveOrderFormat(selectedId));
+              // dispatch(goToStep("done"));
             }
           }}
         />

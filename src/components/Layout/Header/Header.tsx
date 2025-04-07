@@ -10,7 +10,7 @@ const cartIcon = new URL("../../../images/carticon.svg", import.meta.url).href;
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const handleLinkClick = () => setIsMenuOpen(false);
+  console.log(isMenuOpen);
   const { t } = useTranslation();
 
   return (
@@ -24,11 +24,7 @@ const Header: React.FC = () => {
           <img src={logo} alt="" />
         </div>
 
-        <button
-          className={styles.iconButton}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label=""
-        >
+        <button className={styles.iconButton} onClick={() => setIsMenuOpen(prev => !prev)}>
           <img src={burgerIcon} alt="menu" />
         </button>
       </div>
@@ -72,27 +68,27 @@ const Header: React.FC = () => {
         <nav className={styles.topNavMobile}>
           <ul>
             <li>
-              <a href="#" onClick={handleLinkClick}>
+              <a href="#" onClick={() => setIsMenuOpen(false)}>
                 {t("menu.catalog")}
               </a>
             </li>
             <li>
-              <a href="#" onClick={handleLinkClick}>
+              <a href="#" onClick={() => setIsMenuOpen(false)}>
                 {t("menu.themes")}
               </a>
             </li>
             <li>
-              <a href="#" onClick={handleLinkClick}>
+              <a href="#" onClick={() => setIsMenuOpen(false)}>
                 {t("menu.children")}
               </a>
             </li>
             <li>
-              <a href="#" onClick={handleLinkClick}>
+              <a href="#" onClick={() => setIsMenuOpen(false)}>
                 {t("menu.adults")}
               </a>
             </li>
             <li>
-              <a href="#" onClick={handleLinkClick}>
+              <a href="#" onClick={() => setIsMenuOpen(false)}>
                 {t("menu.contacts")}
               </a>
             </li>

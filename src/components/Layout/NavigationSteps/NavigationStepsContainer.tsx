@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/app/providers/store";
-import { goToStep, OrderStep } from "@/entities/book";
+import { goToStep, OrderStep } from "@/entities";
 import NavigationSteps from "./NavigationSteps";
 
 interface Step {

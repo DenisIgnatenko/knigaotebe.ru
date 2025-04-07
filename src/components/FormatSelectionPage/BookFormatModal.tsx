@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./BookFormatModal.module.scss";
-import { BookFormat } from "@/entities/book";
+import { BookFormat } from "@/entities";
 import { useTranslation } from "react-i18next";
 
 interface Props {

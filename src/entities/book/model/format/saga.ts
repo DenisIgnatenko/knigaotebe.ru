@@ -3,6 +3,7 @@ import { BookFormat } from "./types";
 import { fetchFormatsFailure, fetchFormatsRequest, fetchFormatsSuccess } from "./slice";
 
 function* fetchFormatWorker() {
+  console.log("fetchFormatWorker called");
   try {
     yield delay(1000);
     const fakeResponse: BookFormat[] = [
@@ -10,7 +11,7 @@ function* fetchFormatWorker() {
         id: "economy",
         title: "formats.economy.title",
         shortDescription: "formats.economy.shortDescription",
-        image: new URL("../../../images/books/economy.png", import.meta.url).href,
+        image: new URL("../../../../images/books/economy.png", import.meta.url).href,
         details: {
           description: "formats.economy.description",
           cover: {
@@ -32,7 +33,7 @@ function* fetchFormatWorker() {
         id: "standard",
         title: "formats.standard.title",
         shortDescription: "formats.standard.shortDescription",
-        image: new URL("../../../images/books/standard.png", import.meta.url).href,
+        image: new URL("../../../../images/books/standard.png", import.meta.url).href,
         details: {
           description: "formats.standard.description",
           cover: {
@@ -54,7 +55,7 @@ function* fetchFormatWorker() {
         id: "premium",
         title: "formats.premium.title",
         shortDescription: "formats.premium.shortDescription",
-        image: new URL("../../../images/books/economy.png", import.meta.url).href,
+        image: new URL("../../../../images/books/premium.png", import.meta.url).href,
         details: {
           description: "formats.premium.description",
           cover: {

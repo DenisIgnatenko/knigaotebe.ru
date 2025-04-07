@@ -1,7 +1,7 @@
 import createSagaMiddleware from "redux-saga";
 import { configureStore } from "@reduxjs/toolkit";
-import bookConfigReducer from "../../entities/book/model/slice";
-import orderReducer from "../../entities/book/model/orderSlice";
+import bookConfigReducer from "../../entities/book/model/format/slice";
+import orderReducer from "../../entities/book/model/order/slice";
 import rootSaga from "./rootSaga";
 
 const sagaMiddleware = createSagaMiddleware();

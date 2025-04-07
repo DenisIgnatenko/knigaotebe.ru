@@ -14,11 +14,17 @@
   }
 }
 
+.cardWrapper {
+  position: relative;
+  display: inline-block;
+}
+
 .selected {
   background: #f5f3e5;
 }
 
 .imageWrapper {
+  position: relative;
   height: 200px;
   overflow: hidden;
   background-color: #f3f3f3;
@@ -80,16 +86,59 @@
   align-items: center;
   justify-content: space-between;
   margin-top: auto;
+  font-family: Rubik, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.42px;
 
   .size {
-    font-size: 14px;
-    font-weight: 500;
     color: #53504a;
   }
 
   .price {
-    font-size: 16px;
-    font-weight: 600;
     color: #53504a;
+  }
+}
+
+.infoIcon {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  padding: 2px 2px;
+  background: var(--text_1, #53504a);
+  border-radius: 1000px;
+}
+
+.bestSellerBadge {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: Rubik, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: white;
+    text-align: center;
+    white-space: pre-line;
+    transform: translate(-50%, -50%);
   }
 }

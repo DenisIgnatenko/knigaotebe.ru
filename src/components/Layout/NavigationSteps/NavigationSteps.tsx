@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./NavigationSteps.module.scss";
 import classNames from "classnames";
-import { OrderStep } from "@/entities/book";
+import { OrderStep } from "@/entities";
 
 interface Step {
   key: OrderStep;

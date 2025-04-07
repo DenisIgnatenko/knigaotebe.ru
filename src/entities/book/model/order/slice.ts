@@ -9,10 +9,10 @@ interface OrderState {
 
 const initialState: OrderState = {
   formatId: null,
-  step: "format"
+  step: "preview"
 };
 
-const orderSlice = createSlice({
+const slice = createSlice({
   name: "order",
   initialState,
   reducers: {
@@ -21,9 +21,10 @@ const orderSlice = createSlice({
     },
     goToStep(state, action: PayloadAction<OrderStep>) {
       state.step = action.payload;
-    }
+    },
+    orderFormatSelected(state, _action: PayloadAction<string>) {}
   }
 });
 
-export const { saveOrderFormat, goToStep } = orderSlice.actions;
-export default orderSlice.reducer;
+export const { saveOrderFormat, goToStep, orderFormatSelected } = slice.actions;
+export default slice.reducer;

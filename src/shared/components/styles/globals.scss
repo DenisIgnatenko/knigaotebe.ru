@@ -10,3 +10,9 @@ body {
 .app {
   padding: 2rem;
 }
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
